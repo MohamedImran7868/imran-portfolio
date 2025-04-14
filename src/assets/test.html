@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagonal Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .left {
+      flex: 1;
+      background-color: #f0f0f0; /* Light grey */
+      position: relative;
+    }
+
+    .right {
+      flex: 1;
+      background: url('imran.jpg') center center/cover no-repeat;
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+      position: relative;
+    }
+
+    .bottom-bar {
+      height: 40px;
+      background-color: #a5ffae; /* Light green */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <!-- Add text or content here -->
+    </div>
+    <div class="right">
+      <!-- Image is background here -->
+    </div>
+  </div>
+  <div class="bottom-bar"></div>
+</body>
+</html>
