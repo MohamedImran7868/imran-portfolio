@@ -20,4 +20,4 @@ A responsive personal portfolio showcasing my projects, skills, and developer jo
 
 ## 🌐 Live Demo
 
-[View Portfolio](https://yourusername.github.io) *Replace with your URL*\
+[View Portfolio](https://mohamedimran7868.github.io/imran-portfolio/#/)
