@@ -1,27 +1,44 @@
 /* Global Layout*/
-@import url('https://fonts.googleapis.com/css2?family=Cooper+Hewitt:wght@400;500;700&display=swap');
 :root{
   --color-background: #ebebeb;
-  --color-navbar: #94fbab;
-  --color-navbar-text: #000000;
-  --color-navbar-text-hover: #222222;
-  --color-navbar-text-active: #ffffff;
-  --color-navbar-text-active-hover: #e3e3e3;
+  --color-navbar: #167544;
+  --color-navbar-text: #ffffff;
+  --color-navbar-text-hover: #167544;
   --color-h1:#167544;
   --color-text: #000000;
   --color-input: #167544;
   --color-button: #167544;
   --color-button-hover: #105732;
+  --color-button-text: white;
+  --color-line-color: #ddd;
+  --color-bio: #475569;
+  --color-linkedin: #3b82f6;
+  --color-github: #1e293b;
+  --color-footer: #64748b;
 
-  --font-primary: 'Cooper Hewitt', sans-serif;
+  --font-primary: sans-serif;
+}
+
+.dark-mode {
+  --color-background: #121212;
+  --color-text: #e0e0e0;
+  --color-h1: rgb(90, 213, 116);
+  --color-bio: #a1a1aa;
+  --color-line-color: #333;
+  --color-footer: #71717a;
+  --color-input: #1e293b;
+  --color-linkedin: #3b82f6;
+  --color-github: #f0f0f0;
 }
 
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s;
 }
 
 body{
   background-color: var(--color-background);
+  transition: background-color 0.3s, color 0.3s;
   font-family: var(--font-primary);
   color: var(--color-text);
   margin: 0;
@@ -50,19 +67,29 @@ button:active{
   padding: 1rem;
   position: sticky;
   top: 10px;
-  z-index: 1000;
+  z-index: 10;
 }
 
-/* Navbar Base Styles */
 .navbar {
   display: flex;
-  background: var(--color-h1);
+  background: var(--color-navbar);
   padding: 0.5rem;
   border-radius: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Chip Tab Button Styles */
+.dark-mode-btn {
+  position: relative;
+  right: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  background-color: var(--color-button);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--color-navbar-text);
+}
+
 .nav-btn {
   position: relative;
   background: transparent;
@@ -72,7 +99,7 @@ button:active{
   font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-navbar-text-active);
+  color: var(--color-navbar-text);
   cursor: pointer;
   z-index: 1;
   transition: all 0.3s ease;
@@ -94,7 +121,7 @@ button:active{
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--color-navbar-text-active);
+  background: var(--color-navbar-text);
   border-radius: 50px;
   z-index: 1;
   transform: scaleX(0);
@@ -108,30 +135,7 @@ button:active{
 }
 
 .nav-btn:hover span {
-  color: var(--color-h1);
-}
-
-/* Active State */
-.nav-btn:active,
-.nav-btn.active {
-  background: var(--color-navbar-text-active);
-}
-
-.nav-btn:active span,
-.nav-btn.active span {
-  color: var(--color-h1);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .navbar {
-      width: 80%;
-  }
-  
-  .nav-btn {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
-  }
+  color: var(--color-navbar-text-hover);
 }
 
 @media (max-width: 768px) {
@@ -140,23 +144,23 @@ button:active{
       flex-wrap: wrap;
       padding: 0.5rem;
   }
-  
   .nav-btn {
       flex: 1 1 auto;
-      min-width: 100px;
+      min-width: 80px;
       margin: 0.2rem;
       font-size: 0.85rem;
       padding: 0.5rem 1rem;
   }
 }
-
-@media (max-width: 480px) {
-  .nav-btn {
-      min-width: 80px;
-      font-size: 0.8rem;
-      padding: 0.4rem 0.8rem;
-  }
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--color-footer);
 }
+
+/* PAGES CSS */
 
 /* Home */
 .home-container {
@@ -190,16 +194,15 @@ button:active{
 
 .bio {
   font-size: 1.25rem;
-  color: #475569;
+  color: var(--color-bio);
   margin-bottom: 2rem;
   max-width: 500px;
   line-height: 1.6;
 }
 
-/* Resume Button */
 .resume-btn {
   background: var(--color-button);
-  color: white;
+  color: var(--color-button-text);
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
@@ -213,7 +216,6 @@ button:active{
   background-color: var(--color-button-hover);
 }
 
-/* Bottom Section */
 .inner-bottom {
   display: flex;
   justify-content: space-between;
@@ -224,18 +226,18 @@ button:active{
 .work-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--color-github);
   text-transform: uppercase;
 }
 
 .location {
   font-size: 1.1rem;
-  color: #64748b;
+  color: var(--color-bio);
 }
 
 .nation {
   font-weight: 700;
-  color: #3b82f6;
+  color: var(--color-linkedin);
 }
 
 .inner-bottom-right {
@@ -244,39 +246,25 @@ button:active{
 }
 
 .home-icon {
-  color: #1e293b;
+  color: var(--color-linkedin);
   transition: transform 0.3s;
 }
 
-.home-icon:hover {
-  transform: scale(1.1);
-  color: #3b82f6;
+.github-icon{
+  color: var(--color-github);
+  transition: transform 0.3s;
 }
 
-/* Profile Image */
+.home-icon:hover, .github-icon:hover {
+  transform: scale(1.1);
+}
+
 .profile-pic {
   width: 100%;
   height: 100%;
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.footer {
-  text-align: center;
-  padding: 0.2rem;
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-@media (max-width: 1024px) {
-  .home-left h1 {
-    font-size: 3rem;
-  }
-  
-  .bio {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -326,40 +314,12 @@ button:active{
   }
 }
 
-@media (max-width: 480px) {
-  .home-left h1 {
-    font-size: 2rem;
-  }
-  
-  .bio {
-    font-size: 1rem;
-  }
-  
-  .resume-btn {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-  }
-  
-  .home-icon {
-    size: 40px;
-  }
-  
-  .work-title {
-    font-size: 1.2rem;
-  }
-  
-  .location {
-    font-size: 1rem;
-  }
-}
-
 /* About */
-/* About.css */
 .about-container {
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  height: 80vh;
+  margin-bottom: 16px;
   box-sizing: border-box;
 }
 
@@ -385,6 +345,7 @@ button:active{
   flex: 1;
 }
 
+
 .ahievement-list {
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
@@ -395,11 +356,10 @@ button:active{
 hr {
   border: 0;
   height: 1px;
-  background-color: #ddd;
+  background-color: var(--color-line-color);
   margin: 2rem 0;
 }
 
-/* Skills Icons Grid */
 .bottom-container {
   display: flex;
   flex-direction: column;
@@ -418,7 +378,6 @@ hr {
 
 .bottom-container svg {
   font-size: 4rem;
-  color: #3b82f6;
   transition: transform 0.3s;
 }
 
@@ -426,7 +385,6 @@ hr {
   transform: scale(1.1);
 }
 
-/* Responsive Layout */
 @media (min-width: 768px) {
   .inner-container {
     flex-direction: row;
@@ -438,13 +396,7 @@ hr {
   }
 }
 
-/* Certificate indentation */
-.about-right ul {
-  padding-left: 1.5rem;
-}
-
 /* Project */
-/* Project.css */
 .project-container {
   padding: 2rem;
   max-width: 1200px;
@@ -453,10 +405,9 @@ hr {
 }
 
 .project-title {
-  font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: #333;
+  color: var(--color-h1);
   text-transform: uppercase;
 }
 
@@ -470,10 +421,16 @@ hr {
 .project-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-line-color);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .project-image {
@@ -491,7 +448,7 @@ hr {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #3b82f6;
+  color: var(--color-linkedin);
 }
 
 .project-description {
@@ -511,7 +468,6 @@ hr {
   padding-bottom: 0.25rem;
 }
 
-/* Responsive Layout */
 @media (min-width: 768px) {
   .project-item {
     flex-direction: row;
@@ -529,25 +485,17 @@ hr {
   }
 }
 
-/* Minimalist hover effect */
-.project-item:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
 /* Contact */
 .contact-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 80vh;
   padding: 50px;
   margin: 0 auto;
+  margin-bottom: 10px;
   box-sizing: border-box;
 }
 
-/* Right section (top and bottom) */
 .right {
   order: 1;
 }
@@ -565,7 +513,6 @@ hr {
 
 }
 
-/* Left section (form) */
 .Left {
   order: 2;
 }
@@ -605,7 +552,7 @@ input::placeholder, textarea::placeholder{
 
 .submit-btn {
   background: var(--color-button);
-  color: white;
+  color: var(--color-button-text);
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 50px;
@@ -618,18 +565,6 @@ input::placeholder, textarea::placeholder{
   background: var(--color-button-hover);
 }
 
-/* Icons */
-.icon {
-  font-size: 1.5rem;
-  color: #3b82f6;
-  transition: transform 0.3s;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-}
-
-/* Responsive layout */
 @media (min-width: 768px) {
   .contact-container {
     flex-direction: row;
@@ -650,9 +585,4 @@ input::placeholder, textarea::placeholder{
     order: 2;
     flex: 1;
   }
-}
-
-/* Footer spacing */
-.contact-container {
-  padding-bottom: 4rem;
 }

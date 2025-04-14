@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -36,18 +37,19 @@ function About(){
             <div className="bottom-container">
                 <h1 className="title">Skill</h1>
                 <div className="skill">
-                    <FaHtml5 />
-                    <FaCss3Alt />
-                    <IoLogoJavascript />
-                    <FaJava />
-                    <FaPython />
-                    <FaReact />
-                    <SiPhp />
-                    <SiMysql />
-                    <SiCplusplus />
+                    <FaHtml5 color="#e34c26"/>
+                    <FaCss3Alt color="#2965f1"/>
+                    <IoLogoJavascript color="#F0DB4F"/>
+                    <FaJava color="#f89820"/>
+                    <FaPython color="#306998"/>
+                    <FaReact color="#88dded"/>
+                    <SiPhp color="#474A8A"/>
+                    <SiMysql color="#00758f"/>
+                    <SiCplusplus color="#044F88"/>
                 </div>
             </div>
         </div>
+        <Footer/>
         </>
     );
 }

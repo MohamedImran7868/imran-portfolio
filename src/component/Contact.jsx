@@ -1,5 +1,7 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import emailjs from '@emailjs/browser' 
 
 function Contact(){
@@ -23,7 +25,8 @@ function Contact(){
                 </div>
                 <div className="bottom-right">
                     <p>Other:</p> 
-                    <a href="https://www.linkedin.com/in/mohamed-imran-9b618a2a7/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="icon" size={50}/></a>
+                    <a href="https://www.linkedin.com/in/mohamed-imran-9b618a2a7/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="home-icon" size={50}/></a>
+                    <a href="https://github.com/MohamedImran7868/" target="_blank" rel="noopener noreferrer"><FaGithub className="github-icon" size={50}/></a>
                 </div>
             </div>
             <div className="Left">
@@ -36,6 +39,7 @@ function Contact(){
                 </form>
             </div>
         </div>
+        <Footer/>
         </>
     );
 }

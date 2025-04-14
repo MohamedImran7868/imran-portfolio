@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import { FaGithub } from "react-icons/fa";
 import pic1 from '../assets/project 1.png';
 import pic2 from '../assets/project 2.png';
@@ -40,9 +41,10 @@ function Project(){
                 </div>
             </div>
             <div className="others">
-                <p>For more: <a href="https://github.com/MohamedImran7868/" target="_blank" rel="noopener noreferrer"><FaGithub className="project-icon" size={24}/></a></p>
+                <p>For more: <a href="https://github.com/MohamedImran7868/" target="_blank" rel="noopener noreferrer"><FaGithub className="github-icon" size={24}/></a></p>
             </div>
         </div>
+        <Footer/>
         </>
     );
 }

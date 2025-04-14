@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import Footer from "./Footer";
 import Header from './Header';
 import pic from '../assets/imran.jpg';
 import { FaLinkedin } from "react-icons/fa"
@@ -24,7 +24,7 @@ function Home(){
                         </div>
                         <div className='inner-bottom-right'>
                             <a href="https://www.linkedin.com/in/mohamed-imran-9b618a2a7/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="home-icon" size={50}/></a>
-                            <a href="https://github.com/MohamedImran7868/" target="_blank" rel="noopener noreferrer"><FaGithub className="home-icon" size={50}/></a>
+                            <a href="https://github.com/MohamedImran7868/" target="_blank" rel="noopener noreferrer"><FaGithub className="github-icon" size={50}/></a>
                         </div>
                     </div>
                 </div>
@@ -32,9 +32,7 @@ function Home(){
                     <img src={pic} alt="Imran" className='profile-pic'/>
                 </div>
             </div>
-            <footer className='footer'>
-                <p>Copyright &copy; 2025 Imran's Portfolio. All rights reserved.</p>
-            </footer>
+            <Footer/>
         </>
     );
 }

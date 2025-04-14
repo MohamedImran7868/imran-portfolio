@@ -1,11 +1,12 @@
 import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import React, {useState, useEffect} from 'react';
 import Home from './component/Home';
 import About from './component/About';
 import Contact from './component/Contact';
 import Project from './component/Project';
 
 function App() {
-``
+
   return (
     <>
     <Router>
