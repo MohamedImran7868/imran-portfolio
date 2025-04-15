@@ -10,6 +10,7 @@ A responsive personal portfolio showcasing my projects, skills, and developer jo
 - Fully responsive design
 - Project showcase with descriptions
 - Interactive contact form
+- Dark mode activation
 
 ## 🛠️ Technologies
 
