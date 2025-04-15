@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import Header from './Header';
-import pic from '../assets/imran.jpg';
+import pic from '../assets/imran.webp';
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa";
 
