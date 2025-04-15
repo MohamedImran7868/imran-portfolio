@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import pic1 from '../assets/project 1.png';
 import pic2 from '../assets/project 2.png';
 import pic3 from '../assets/project 3.png';
+import pic4 from '../assets/project 4.png';
 
 function Project(){
     return(
@@ -27,7 +28,7 @@ function Project(){
                     <img src={pic2} alt="Project 2" className="project-image"/>
                     <div className="project-details">
                         <a className="project-name" href="https://imran-pokemon-fetch-api.tiiny.site/" target="_blank">Pokemon Stats Search</a>
-                        <p className="project-description">A simple project that retrieve and display the attribute of entered pokemon name or id</p>
+                        <p className="project-description">A simple project that retrieve and display the attribute of entered pokemon name or id.</p>
                         <p>Pikachu (name)</p>
                         <p>2 (id)</p>
                     </div>
@@ -36,7 +37,15 @@ function Project(){
                     <img src={pic3} alt="Project 3" className="project-image"/>
                     <div className="project-details">
                         <a className="project-name" href="https://determined-coyote.static.domains/" target="_blank">Cash Register</a>
-                        <p className="project-description">A simple project that show the changes given and remaining changes based on user input</p>
+                        <p className="project-description">A simple project that show the changes given and remaining changes based on user input.</p>
+                        <p>The Item Amount is fixed: $3.26</p>
+                    </div>
+                </div>
+                <div className="project-item">
+                    <img src={pic4} alt="Project 4" className="project-image"/>
+                    <div className="project-details">
+                        <a className="project-name" href="https://imran7868.playcode.io/" target="_blank">Quote Machine</a>
+                        <p className="project-description">A quote machine that generates quote.</p>
                     </div>
                 </div>
             </div>

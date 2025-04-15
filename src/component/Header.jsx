@@ -5,12 +5,16 @@ function Header() {
     const [isDarkMode, setIsDarkMode] = useState(false);
     
       const toggleDarkMode = () => {
-        if (isDarkMode) {
-            document.body.classList.add('dark-mode');
-          } else {
-            document.body.classList.remove('dark-mode');
-          }
-        setIsDarkMode(!isDarkMode);
+        
+        setIsDarkMode((prevMode) => {
+            const newMode = !prevMode;
+            if (newMode) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+            return newMode;
+        });
       };
     const navigate = useNavigate();
     return (
