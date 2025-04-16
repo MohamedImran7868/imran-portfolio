@@ -12,7 +12,7 @@ function Home(){
                 <div className='home-left'>
                     <div className='home-details'>
                         <h1> Mohamed Imran</h1>
-                        <p className='bio'>A passionate junior software developer who is ready to Adventure the thrilling Technology world</p>
+                        <p className='bio'>A passionate junior software developer who is ready to adventure the thrilling Technology world.</p>
                     </div>
                     <div className='home-btn-container'>
                         <a href="/imran-portfolio/resume.pdf" download>
