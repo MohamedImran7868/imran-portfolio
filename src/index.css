@@ -318,8 +318,8 @@ button:active{
 .about-container {
   padding: 1rem 2rem;
   max-width: 1200px;
-  min-height: 80vh;
   margin: 0 auto;
+  margin-bottom: 16px;
   box-sizing: border-box;
 }
 
@@ -496,7 +496,6 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 80vh;
   padding: 50px;
   margin: 0 auto;
   margin-bottom: 10px;
