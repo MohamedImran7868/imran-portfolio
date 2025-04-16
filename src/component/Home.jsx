@@ -15,7 +15,9 @@ function Home(){
                         <p className='bio'>A passionate junior software developer who is ready to Adventure the thrilling Technology world</p>
                     </div>
                     <div className='home-btn-container'>
-                        <button className='resume-btn'>Resume</button>
+                        <a href="/imran-portfolio/resume.pdf" download>
+                            <button className='resume-btn'>Resume</button>
+                        </a>
                     </div>
                     <div className='inner-bottom'>
                         <div className='inner-bottom-left'>
