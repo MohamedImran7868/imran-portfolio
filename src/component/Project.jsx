@@ -16,7 +16,10 @@ function Project(){
                 <div className="project-item">
                     <img src={pic1} alt="Project 1" className="project-image"/>
                     <div className="project-details">
-                        <a className="project-name" href="https://imran7868.ct.ws/FYPWise-web/" target="_blank">FYPWise</a>
+                        <div className="project-details-title">
+                            <a className="project-name" href="https://imran7868.ct.ws/FYPWise-web/" target="_blank">FYPWise</a>
+                            <a className="project-name" href="https://github.com/FYPWise/FYPWise-web" target="_blank"><FaGithub size={30} className="github-icon"/></a>
+                        </div>
                         <p className="project-description">A group project, done by 4 wizards. This project is about managing students FYP through a website.</p>
                         <p>Role: id (password)</p>
                         <p>Student: 1211101935 (123)</p>
@@ -27,7 +30,10 @@ function Project(){
                 <div className="project-item">
                     <img src={pic2} alt="Project 2" className="project-image"/>
                     <div className="project-details">
-                        <a className="project-name" href="https://imran-pokemon-fetch-api.tiiny.site/" target="_blank">Pokemon Stats Search</a>
+                        <div className="project-details-title">
+                            <a className="project-name" href="https://imran-pokemon-fetch-api.tiiny.site/" target="_blank">Pokemon Stat Search</a>
+                            <a className="project-name" href="https://github.com/MohamedImran7868/Pokemon" target="_blank"><FaGithub size={30} className="github-icon"/></a>
+                        </div>
                         <p className="project-description">A simple project that retrieve and display the attribute of entered pokemon name or id.</p>
                         <p>Pikachu (name)</p>
                         <p>2 (id)</p>
@@ -36,7 +42,10 @@ function Project(){
                 <div className="project-item">
                     <img src={pic3} alt="Project 3" className="project-image"/>
                     <div className="project-details">
-                        <a className="project-name" href="https://determined-coyote.static.domains/" target="_blank">Cash Register</a>
+                        <div className="project-details-title">
+                            <a className="project-name" href="https://determined-coyote.static.domains/" target="_blank">Cash Register</a>
+                            <a className="project-name" href="https://github.com/MohamedImran7868/Cash-Register" target="_blank"><FaGithub size={30} className="github-icon"/></a>
+                        </div>
                         <p className="project-description">A simple project that show the changes given and remaining changes based on user input.</p>
                         <p>The Item Amount is fixed: $3.26</p>
                     </div>
@@ -44,7 +53,10 @@ function Project(){
                 <div className="project-item">
                     <img src={pic4} alt="Project 4" className="project-image"/>
                     <div className="project-details">
-                        <a className="project-name" href="https://imran7868.playcode.io/" target="_blank">Quote Machine</a>
+                        <div className="project-details-title">
+                            <a className="project-name" href="https://imran7868.playcode.io/" target="_blank">Quote Machine</a>
+                            <a className="project-name" href="https://github.com/MohamedImran7868/Quote-Machine" target="_blank"><FaGithub size={30} className="github-icon"/></a>
+                        </div>
                         <p className="project-description">A quote machine that generates quote.</p>
                     </div>
                 </div>
